@@ -56,7 +56,11 @@ Python3 Programming Language Cheatsheet
 ##### Strings have a property named immutability. It means once a string is created, the elements within it cann't be changed or replaced.
 ##### We can use multiplication symbol to create repetition. ex: letter = 'z', letter*10 will print 'zzzzzzzzzz'.
 ##### Similarly there are many methods that are applicable on strings:
+
+
 # ex: a = 'Hello'
+
+
 # a.upper()            => converts string into upper case ==> 'HELLO'
 # a.lower()            => converts string into lower case ==> 'hello'
 # a.title()            => title case a string ==> 'Hello'
@@ -65,6 +69,10 @@ Python3 Programming Language Cheatsheet
 # a.strip()            => completely trim the white spaces
 # a.split()            => split a string by blank spaces
 # a.split("value")     => split the string after some specific value
+# a.center(7,"$")      => Adds "$" to both sides until total length = 7 ==> '$Hello$'
+# a.ljust(7,"$")       => Adds "$" to right side until total length = 7  ==> 'Hello$$'
+# a.rjust(7,"$")       => Adds "$" to left side until total length = 7  ==> '$$Hello'
+
 # a.isalnum()          => True if string consists of only alphanum characters (No symbols).
 # a.isalpha()          => True if string consists of only alphabetic characters (No symbols).
 # a.islower()          => True if string's alphabetic characters are all lower case.
@@ -73,15 +81,50 @@ Python3 Programming Language Cheatsheet
 # a.istitle()          => True if string is in title case
 # a.isupper()          => True if string's alphabetic characters are all upper case.
 
+
+
+
+
 ##### Some other useful string methods or functions that are available in python are:
-# .replace("first_string", "second_string") => first_string will be replaced by second_string
-# .startswith("") => search for a particular character in the starting of a string
-# .endswith("") => search for a particular character in the end of a string
-# .capitalize() => capitalize the first word of the string
-# .swapcase() => swap the case of caharacter in a string
 
 
-# Lists -- [a1, a2, "Some String", [b1, "some other string"]], This is an example of the list.
+#        .replace("first_string", "second_string") => first_string will be replaced by second_string
+#        .startswith("") => search for a particular character in the starting of a string
+#        .endswith("") => search for a particular character in the end of a string
+#        .capitalize() => capitalize the first word of the string
+#        .swapcase() => swap the case of caharacter in a string
+
+
+#   Lists -- [a1, a2, "Some String", [b1, "some other string"]], This is an example of the list.
 # There are several List Operations like
-# a = 
+
+# a = [1,2,3]   b=[4,5,6]   
+
+# a+b         => appends the 2 lists               ==> [1,2,3,4,5,6]
+# a.append(4)  => appends 4 to the list            ==> [1,2,3,4]
+# a.insert(2,4)  => inserts 4 to index 2           ==> [1,2,4,3]
+# a.index(3)    => returns smallest index of the element specified ==> 2
+# a.count(3)    => returns no of occurance of the element    ==> 1
+# a.pop(0)      => removes item at the given index      ==> [2,3]     (if blank - removes last element)
+# a.remove(2)    => removes the item from the list      ==> [1,3]
+# a.clear()     => removes all items from the list      ==> []
+ 
+# c = a.copy()              => create copy of the list     ==>  c = [1,2,3]
+# "-".join(a)               => joins list with the item specified   ==>  '1-2-3"
+# c = list(range(1,5))           => create list of numbers in range 1-5  ==> [1,2,3,4]
+# c = [i for i in range(1,5)]    => create list of numbers in range 1-5  ==> [1,2,3,4]
+
+# len(a)      => find length of list            ==> len(a) = 3  
+# sum(a)      => find sum of elements of list   ==> sum(a) = 6
+# sorted(a)   => prints sorted list (alphabetical or ascending order)
+# reversed(a) => returns list in reverse      ==> [3,2,1]
+# min(a)      => returns minimum value       ==> 1
+# max(a)      => returns maximum value       ==> 3   
+
+
+
+
+
+#   format string     ------->     print("{0} is the {1}".format("python","best"))      ----> OUTPUT : python is the best
+
 
